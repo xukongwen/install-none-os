@@ -17,7 +17,7 @@ sed -i '1iServer = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
 
 
 # 开始安装核心组件
-pacstrap /mnt base linux linux-firmware vim networkmanager
+pacstrap /mnt base linux linux-firmware vim networkmanager git 
 echo 'linux install done'
 genfstab -U /mnt >> /mnt/etc/fstab
 
