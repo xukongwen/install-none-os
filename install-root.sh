@@ -20,11 +20,14 @@ mkinitcpio -P
 echo 'input pass'
 passwd
 echo 'make grub'
-pacman -S grub efibootmgr
+echo y | pacman -S grub efibootmgr
 
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 
 grub-mkconfig -o /boot/grub/grub.cfg
+
+mkdir -p /boot/EFI/BOOT
+mv /boot/EFI/GRUB/grubx64.efi /efi/EFI/BOOT/BOOTX64.EFI
 
 
 echo 'this is ok?'
