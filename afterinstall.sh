@@ -4,7 +4,9 @@ nmcli device wifi connect Pi password hotelvic
 
 pacman -S zsh xorg qtile termite xorg-xinit feh emacs neofetch openssh
 
-pacman -S fcitx5-chinese-addons fcitx5 fcitx5-gtk fcitx5-qt5 fcitx5-rime fcitx5-configtool-qt
+pacman -S fcitx5-chinese-addons fcitx5 fcitx5-gtk fcitx5-rime fcitx5-configtool
+
+systemctl start sshd
 
 #mv ./data/KKong3.ttf /etc/share/
 # 启动x和qtile
