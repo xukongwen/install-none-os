@@ -1,10 +1,8 @@
 #/bin/bash
 
-nmcli device wifi connect Pi password hotelvic
+sudo nmcli device wifi connect Pi password hotelvic
 
-pacman -S zsh xorg qtile termite xorg-xinit feh emacs neofetch openssh
-
-pacman -S fcitx5-chinese-addons fcitx5 fcitx5-gtk fcitx5-rime fcitx5-configtool
+sudo pacman -S zsh xorg qtile termite xorg-xinit feh emacs neofetch openssh fcitx5-chinese-addons fcitx5 fcitx5-gtk fcitx5-rime fcitx5-configtool
 
 systemctl start sshd
 
@@ -21,7 +19,7 @@ sudo cp ./data/KKong3 /usr/share/fonts/
 fc-cache -f -v
 
 # 配置qtile和termit
-cd
+cd /home/k
 mkdir git
 cd git
 git clone https://github.com/xukongwen/.dotfiles.git
