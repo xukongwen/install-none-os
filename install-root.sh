@@ -20,7 +20,7 @@ mkinitcpio -P
 echo 'input pass'
 passwd
 echo 'make grub'
-echo y | pacman -S grub efibootmgr
+echo y | pacman -S grub efibootmgr sudo
 
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 
@@ -30,4 +30,6 @@ mkdir -p /boot/EFI/BOOT
 mv /boot/EFI/GRUB/grubx64.efi /boot/EFI/BOOT/BOOTX64.EFI
 
 
-echo 'done'
+echo 'root install done'
+
+exit
