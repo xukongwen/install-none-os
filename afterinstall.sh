@@ -1,8 +1,8 @@
 #/bin/bash
 
-#nmcli device wifi connect Pi password hotelvic
+nmcli device wifi connect Pi password hotelvic
 
-pacman -S zsh xorg qtile termite xorg-xinit feh emacs
+pacman -S zsh xorg qtile termite xorg-xinit feh emacs neofetch openssh
 
 pacman -S fcitx5-chinese-addons fcitx5 fcitx5-gtk fcitx5-qt5 fcitx5-rime fcitx5-configtool-qt
 
@@ -24,8 +24,10 @@ mkdir git
 cd git
 git clone https://github.com/xukongwen/.dotfiles.git
 
-cp -r /home/k/install-none-os/wallpapers /home/k/
+cp -r /home/install/data/wallpapers /home/k/
 
+cd
+mkdir .config
 cp -r /home/k/git/.dotfiles/qtile/ /home/k/.config/
 cp -r /home/k/git/.dotfiles/termite/ /home/k/.config/
 
@@ -33,3 +35,7 @@ cp -r /home/k/git/.dotfiles/termite/ /home/k/.config/
 cp /home/k/git/.dotfiles/data/.pam_environment ~/
 
 chsh -s /bin/zsh
+
+zsh
+
+reboot
