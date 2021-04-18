@@ -27,7 +27,7 @@ grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 
 mkdir -p /boot/EFI/BOOT
-mv /boot/EFI/GRUB/grubx64.efi /efi/EFI/BOOT/BOOTX64.EFI
+mv /boot/EFI/GRUB/grubx64.efi /boot/EFI/BOOT/BOOTX64.EFI
 
 
-echo 'this is ok?'
+echo 'done'
